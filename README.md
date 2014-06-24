@@ -1,8 +1,8 @@
 #Description
     
-    An iOS pop up list view, like Spinner in Android. You can use it to create Android like controls,
-    such as Spinner or AutoCompleteTextView, for your iOS project. It's under MIT license, 
-    so help yourself and have fun.
+An iOS pop up list view, like Spinner in Android. You can use it to create Android like controls,
+such as Spinner or AutoCompleteTextView, for your iOS project. It's under MIT license,
+so help yourself and have fun.
 
 #Example
     
