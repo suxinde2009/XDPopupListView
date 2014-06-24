@@ -144,7 +144,7 @@
     
 
 
-#Screenshot
+#Screenshots
 ![image1](https://raw.github.com/suxinde2009/XDPopupListView/master/snapshot01.png)
 
 ![image2](https://raw.github.com/suxinde2009/XDPopupListView/master/snapshot02.png)
