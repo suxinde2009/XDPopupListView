@@ -25,7 +25,7 @@
 #import "XDPopupListView.h"
 
 
-@implementation UIView (UIEffects)
+@implementation UIView (UIShadowBorderEffects)
 
 + (void)shadowBorder:(UIView *)view
 {
@@ -77,6 +77,13 @@
         mTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         mTableView.dataSource = self;
         mTableView.delegate = self;
+        
+        mTableView.clipsToBounds = YES;
+        mTableView.layer.cornerRadius = 10.0f;
+        
+        mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+        //mTableView.backgroundColor = [UIColor clearColor];
         
         [UIView shadowBorder:mTableView];
         
@@ -149,10 +156,10 @@
         
         
         [UIView animateWithDuration:kDefalutPopupAnimationDuration animations:^{
-           
+            
         } completion:^(BOOL finished) {
             mTableView.frame = CGRectMake(CGRectGetMinX(boundViewframe),
-                                          CGRectGetMinY(boundViewframe)-kDefaultPopupListViewHeight-boundViewframe.size.height,
+                                          CGRectGetMinY(boundViewframe)-kDefaultPopupListViewHeight,
                                           boundViewframe.size.width,
                                           kDefaultPopupListViewHeight);
         }];
@@ -183,6 +190,10 @@
     
     mIsShowing = YES;
     
+    
+    mTableView.layer.cornerRadius = 10.0f;
+    mTableView.clipsToBounds = YES;
+    
     [mTableView reloadData];
     
 }
@@ -198,13 +209,13 @@
     if (mPopupType == XDPopupListViewDropDown) {
         
         [UIView animateWithDuration:kDefalutPopupAnimationDuration animations:^{
-           
+            
         } completion:^(BOOL finished) {
             mTableView.frame = CGRectMake(CGRectGetMinX(boundViewframe),
                                           CGRectGetMaxY(boundViewframe),
                                           boundViewframe.size.width,
                                           0.0f);
-
+            
             [mTableView removeFromSuperview];
             [self removeFromSuperview];
         }];
@@ -297,3 +308,5 @@
 
 
 @end
+
+
