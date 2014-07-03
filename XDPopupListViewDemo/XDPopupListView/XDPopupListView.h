@@ -25,13 +25,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#define kDefaultPopupListViewHeight 240.0f
+#define kDefaultPopupListViewHeight 180.0f
 #define kCenterPopupListViewHeight 300.0f
 #define kCenterPopupListViewWidth  300.0f
 
 #define kDefalutPopupAnimationDuration 0.35f
 
-@interface UIView (UIEffects)
+@interface UIView (UIShadowBorderEffects)
 + (void)shadowBorder:(UIView *)view;
 @end
 
