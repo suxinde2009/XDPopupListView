@@ -1,7 +1,7 @@
 /*
  The MIT License (MIT)
  
- Copyright (c) 2013 SuXinDe (Email: suxinde2009@126.com)
+ Copyright (c) 2014 SuXinDe (Email: suxinde2009@126.com)
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
